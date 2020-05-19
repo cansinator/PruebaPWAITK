@@ -1,0 +1,96 @@
+@import url('fonts.css');
+*{margin:0;padding: 0;}
+.titHiddentMenu {display: none; float: left; width: 230px;}
+/*ul li{z-index: 10;}
+ul li ul li{z-index: 20;}
+ul li ul li ul li{z-index: 30;}*/
+#effectEfect{position: fixed;background-color: #ffffff;z-index: 500;top: 49px;bottom: 0px !important; -webkit-box-shadow: 0px 2px 28px 0px rgba(59,59,59,0.09);-moz-box-shadow:    0px 2px 28px 0px rgba(59,59,59,0.09);box-shadow:0px 2px 28px 0px rgba(59,59,59,0.09);height: 100% !important; overflow: auto;/* */}
+#menuPrincipal{ background-color:#ffffff;    margin-bottom: 90px;}
+.header-usuario {width: 100%;height: 100px;}
+.l-navegacion li {list-style-type: none;background-color: #fff;color: #efefef;padding: 0px;margin: 0px 0px 0px 0px;-webkit-transition: all 0.25s ease-in-out;-moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;transition: all 0.25s ease-in-out;cursor: pointer;border-bottom: solid 1px #f1f1f1;}
+.flechaMenu::before,.flechaMenu::after {content: " ";display: inline-block;vertical-align: middle;}
+.flechaMenu::after {width: 0.4rem;height: 0.4rem;border-right: 2px solid  #00284d;border-top: 2px solid  #00284d;-webkit-transform: rotate(45deg);transform: rotate(45deg);margin-left: -0.5rem;cursor:pointer;}
+/*--- Menú ---*/
+#menuContPrin {padding: 0;margin: 0;border: 0;z-index: 1000;}
+#menuContPrin ul {list-style: none; margin: 0; padding: 0; display: table;position: relative; /**/width: 100%;}
+#menuContPrin:after, #menuContPrin ul:after {content: '';display: block;clear: both; }
+#menuContPrin li { width: 100%; display: table;position: relative; height: 44px;}
+#menuContPrin li:hover { background: #f6f6f6; }
+#menuContPrin a {width: 100%; /*height: 100%*/ height: auto;display: flex;justify-content: space-between; align-items: center;}
+#menuContPrin ul li div { color: #fff; padding: 13px 15px; line-height: 15px; text-align: justify; }
+#menuContPrin ul li a div{ color: #979797; padding: 13px 15px; line-height: 15px; text-align: justify; }
+#menuContPrin ul li a i { color: #979797; line-height: 15px; text-align: justify; font-size: 20px;}
+#menuContPrin ul li a i:hover { color: #979797; color: #fff; font-size: 20px; line-height: 15px;  text-align: justify; }
+#menuContPrin ul li ul {display: none;  position: absolute;left: 0;z-index: 598;width: 220px;/*left: 100%;*/ left: 0%;}
+#menuContPrin > ul > li > a > span { width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; }
+#menuContPrin ul li ul li ul{display: none;  position: absolute;left: 0;z-index: 598;width: 320px;left: 100%;}
+#menuContPrin ul ul li {float: none; }
+#menuContPrin ul ul ul li {float: none; }
+/*--- flechaMenus ---*/
+#menuContPrin ul li .flechaMenu::before,.flechaMenu::after {content: " ";display: inline-block;vertical-align: middle;}
+#menuContPrin ul li .flechaMenu::after { width: 0.4rem; height: 0.4rem; border-left: 0px solid #bababa; border-bottom: 2px solid #bababa; border-right: 2px solid #bababa; border-top: 0px solid #bababa; -webkit-transform: rotate(45deg); transform: rotate(45deg); margin-left: .5rem; cursor: pointer; }
+ul.menuNivel2 li.in a div:nth-child(2).rotar{ transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); margin-left: -0.2rem;  }
+ul.menuNivel2 li.in a div:nth-child(2).rotar::after{ margin-left: -0.2rem!important; }
+/*--- Nivel 1 ---*/
+#menuContPrin ul.menuNivel1 li:hover a span i { color: #fff;}
+#menuContPrin ul.menuNivel1 li.in a span i { color: #fff;}
+#menuContPrin ul.menuNivel1 li.menuActive {background: #00284d; color: #fff!important; }
+#menuContPrin ul.menuNivel1 li:hover{background-color: #00284d;}
+#menuContPrin > ul.menuNivel1 > li:nth-child(1), #menuContPrin > ul.menuNivel1 > li:nth-child(1) > a > div{cursor: default;}
+#menuContPrin ul.menuNivel1 li:hover a div, #menuContPrin ul li.in a div{color: #2a633d; }
+#menuContPrin > ul.menuNivel1 > li:nth-child(2){border-top-style: solid;border-top-width: 1px;}
+/*--- Nivel 2 ---*/
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 { margin-top: 0px;/* */width: 100%; top: 48px; /*left: 41px;*/ left: 0; bottom: 0px; /*position: fixed;*/ position: static; /*background-color: #fff;*/ background-color: #c4d6c4; cursor: none;cursor: auto; background-color: #fff; }
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li {margin-top: 0px; background: #fff; border-bottom: 1px solid #f3f8f3;}
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li a div{color: #979797;font-family: 'Roboto-Regular';/* */margin-left: 40px;}
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li:hover a div {color: #00284d; }
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3 li:nth-child(1){ border-top-style: solid; border-top-width: 1px; cursor: auto;}
+/*--- Nivel 3 ---*/
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3 {width: 100%; margin-top: 0px;   top: 49px; /*left: 261px;*/left: 0px;  bottom: 0px;  /*position: fixed;*/position: static; /*background-color: #fff;*/background-color: #c4d6c4; }
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3 li {margin-top: 0px; background: #fff; border-bottom: 1px solid #ebf1eb; }
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3 li a div {color: #979797;font-family: 'Roboto-Regular';}
+#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3 li:hover a div {color: #00284d; }
+/*--- Class In ---*/
+#menuContPrin > ul.menuNivel1 > li.in{background: #00284d!important;}
+ul.menuNivel2 > li.in > a.active {border-bottom-style: solid;/*border-bottom-width: 2px;*/ border-bottom-color: #f3f8f3; width: 100%}
+ul.menuNivel2 > li.in > a.active div{color: #00284d!important; }
+#menuContPrin ul.menuNivel1 li:hover a div, #menuContPrin ul li.in a div{color: #fff;}
+#menuContPrin ul.menuNivel1 li.in ul.menuNivel2 li a div.active {color:#00284d;}
+#menuContPrin ul.menuNivel1 li.in a:nth-child(2) {width: 320px;  }
+#menuContPrin ul.menuNivel1 li a:nth-child(2) div { position: absolute; top: 0; left: 39px; }
+#menuContPrin ul.menuNivel1 li:nth-child(1).usermenu {display: none;}
+/*--- Media ---*/
+@media (max-width: 800px){
+	.titHiddentMenu {display: block; float: left; }
+	#effectEfect{width: 320px;}
+	/*--- Menú ---*/
+	#menuContPrin ul { width: 100%;}
+	#menuContPrin a {height: auto;}
+	#menuContPrin ul li ul {display: none;  position: relative;left: 0;z-index: 598;width: 320px;left: 0%;}
+	#menuContPrin ul ul li {float: none; }
+	#menuContPrin ul li .flechaMenu::before,.flechaMenu::after {content: " ";display: inline-block;vertical-align: middle;}
+	#menuContPrin ul li .flechaMenu::after {width: 0.3rem; height: 0.3rem; border-left: 0px solid #bababa; border-bottom: 2px solid #bababa; border-right: 2px solid #bababa; border-top: 0px solid #bababa; -webkit-transform: rotate(45deg); transform: rotate(45deg); margin-left: .5rem; cursor: pointer;}
+	/*--- Nivel 1 ---*/
+	ul.menuNivel1 li.in .rotar::after{-webkit-transform: rotate(225deg);transform: rotate(225deg);}
+	#menuContPrin ul.menuNivel1 li:nth-child(2){border-top-style: solid;border-top-width: 0px;}
+	#menuContPrin ul.menuNivel1 li:nth-child(1).usermenu { background: #26a69a; }
+	#menuContPrin ul.menuNivel1 li:nth-child(1).usermenu div { text-align: center;}
+	#menuContPrin ul.menuNivel1 li:nth-child(1){border-top-style: solid;border-top-width: 1px;}
+	#menuContPrin ul.menuNivel1 li:nth-child(1) a div {color: #fff;}
+	/*--- Nivel 2 ---*/
+	#menuContPrin ul.menuNivel1 li ul.menuNivel2 {margin-top: 0px;left: 0px;position: static;background-color: #c4d6c4;}
+	#menuContPrin ul.menuNivel1 li ul.menuNivel2 li a div{margin-left: 48px;}
+	#menuContPrin ul.menuNivel1 li ul.menuNivel2 li a div{color: #979797;font-family: 'Roboto-Regular';/* */margin-left: 40px;}
+	/*--- Nivel 3 ---*/
+	#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3{margin-top: 0px;left: 0px;position: static;background-color: #c4d6c4;}
+	/*--- Class In ---*/
+	#menuContPrin ul.menuNivel1 li:hover a div, #menuContPrin ul li.in a div{color: #fff;}
+	#menuContPrin ul.menuNivel1 li.in a:nth-child(2) {width: 0px;  }
+	#menuContPrin ul.menuNivel1 li a:nth-child(2) div {left: 24	px; }
+	#effectEfect {display: none;}
+}
+@media (max-width: 425px){
+	#effectEfect { width: 100%;}
+	#menuContPrin ul.menuNivel1 li ul.menuNivel2 {width: 100%;}
+	#menuContPrin ul.menuNivel1 li ul.menuNivel2 li ul.menuNivel3 {width: 100%;}
+}

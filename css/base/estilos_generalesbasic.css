@@ -1,0 +1,58 @@
+header div.usuario span.nombre {
+    display: inline-block;
+    font-size: 14px;
+    margin: 9px;
+    color: #0b5eab;
+}
+.aliniar {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+}
+.cuadroprincipal{
+  cursor: default;
+    position: absolute;
+    width: 370px;
+    height: 100%;
+    right: 0;
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 103;
+}
+.contenedor{
+    padding: 0px;
+    min-height: 120px;
+    overflow-y: auto;
+}
+/* Inicio Estilos generales */
+.borde{
+	border: 0px;
+}
+.wrapperfam {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.wrappercontent {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%
+}
+.display_tCellico {
+	width: 46%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.textcarrito{
+	color: #fff;
+	font-size: 1em;
+	display: table-cell;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+/*terminanestilosbásicos*/
+
+
+
