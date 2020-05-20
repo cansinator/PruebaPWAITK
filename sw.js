@@ -16,7 +16,8 @@ const APP_SHELL = [
     'img/ITK_ico.png',
     'img/ITK_logo.png',
     'css/main.css',
-    'js/login.js'    
+    'js/login.js',
+    'js/BD/tbTiendas.js'
 ];
 
 const APP_SHELL_INMUTABLE = [
