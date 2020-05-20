@@ -16,14 +16,15 @@ const APP_SHELL = [
     'img/ITK_ico.png',
     'img/ITK_logo.png',
     'css/main.css',
-    'js/login.js',
-    'js/BD/tbTiendas.js'
+    'js/login.js'
 ];
 
 const APP_SHELL_INMUTABLE = [
     'vendor/jquery/jquery-3.2.1.min.js',
     'vendor/mdtoast/mdtoast.min.js',
-    'vendor/mdtoast/mdtoast.min.css'
+    'vendor/mdtoast/mdtoast.min.css',
+    'js/BD/tbTiendas.js',
+    'js/maps.js'
 ];
 
 
