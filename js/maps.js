@@ -14,7 +14,7 @@ function initMap() {
       mapTypeId: 'roadmap'
     };
 
-    tbTiendas.AgregaRegistro(0, 'CHEDRAUI', '', 38, 'PROMOACTIVADOR', '', 16, 'ZONA 16', 862465, 'JUAN CARLOS CANSINO MARTINEZ', 18.090219, -96.136783, '~/../../img/favicon.png');
+    tbTiendas.AgregaRegistro(0, 'CHEDRAUI', '', 38, 'PROMOACTIVADOR', '', 16, 'ZONA 16', 862465, 'JUAN CARLOS CANSINO MARTINEZ', crd.latitude, crd.longitude, '~/../../img/favicon.png');
     tbTiendas.AgregaRegistro(1, 'CHEDRAUI', '', 38, 'CHEDRAUI', '', 16, 'ZONA 16', 380042, 'TUXTEPEC', 18.091860, -96.131017, '~/../../img/chedraui.png');
     tbTiendas.AgregaRegistro(2, 'WALMART', '', 34, 'MEDIMART', '', 16, 'ZONA 16', 441180, 'TUXTEPEC - OAXACA', 18.090689, -96.133418, '~/../../img/bodegaaurrera.png');
     tbTiendas.AgregaRegistro(2, 'WALMART', '', 34, 'MEDIMART', '', 16, 'ZONA 16', 746277, 'SAMS TUXTEPEC', 18.091146, -96.132068, '~/../../img/sams.png');
@@ -41,7 +41,6 @@ function initMap() {
         
         var ventana = '<div class="info_content"><h3>' + markers[i].tiendaId + ' - ' + markers[i].tiendaNombre + '</h3><p>' + markers[i].zonaNombre + '</p></div>'
         var infoWindow = new google.maps.InfoWindow(), marker, i;
-
         google.maps.event.addListener(marker, 'click', (function (marker, i) {
           return function () {
             infoWindow.setContent(ventana);
