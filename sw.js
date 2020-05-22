@@ -81,10 +81,10 @@ const APP_SHELL = [
 ];
 
 const APP_SHELL_INMUTABLE = [
-    'vendor/jquery/jquery-3.2.1.min.js',
     'js/template.js',
     'js/base/funciones.js',
     'js/base/jquery-3.3.1.min.js',
+    'vendor/jquery/jquery-3.2.1.min.js',
     'vendor/mdtoast/mdtoast.min.js',
     'vendor/mdtoast/mdtoast.min.css',
     'vendor/animate/animate.css',
