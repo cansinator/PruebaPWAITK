@@ -84,7 +84,18 @@ const APP_SHELL_INMUTABLE = [
     'js/template.js',
     'js/base/funciones.js',
     'js/base/jquery-3.3.1.min.js',
-    'vendor/jquery/jquery-3.2.1.min.js'
+    'vendor/jquery/jquery-3.2.1.min.js',
+    'vendor/mdtoast/mdtoast.min.js',
+    'vendor/mdtoast/mdtoast.min.css',
+    'vendor/animate/animate.css',
+    'vendor/animsition/animsition.css',
+    'vendor/animsition/animsition.js',
+    'vendor/animsition/animsition.min.css',
+    'vendor/animsition/animsition.min.js',
+    'vendor/animsition/css/animsition.css',
+    'vendor/animsition/css/animsition.min.css',
+    'vendor/animsition/js/animsition.js',
+    'vendor/animsition/js/animsition.min.js'
 ];
 
 
