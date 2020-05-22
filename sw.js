@@ -245,16 +245,6 @@ self.addEventListener('activate', e => {
 
 
 self.addEventListener('fetch', e => {
-
-    if (e.request.url.indexOf('https://maps.googleapi.com/js') == 0) {
-        e.respondWith(caches.match(e.request).then(function(response) {
-            return response || fetch(e.request);
-          }));
-            
-    } else {
-        e.respondWith();
-
-    }
     const responseSw = caches.match(e.request).then(respCache => {
         if (respCache) {
             return respCache;
