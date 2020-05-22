@@ -252,7 +252,7 @@ self.addEventListener('fetch', e => {
         );
       } else {
         event.respondWith(
-          // Some default handling.
+
         );
         
     const responseSw = caches.match(e.request).then(respCache => {
