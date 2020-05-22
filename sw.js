@@ -173,7 +173,34 @@ const APP_SHELL_INMUTABLE = [
     'fonts/font-awesome-4.7.0/less/screen-reader.less',
     'fonts/font-awesome-4.7.0/less/stacked.less',
     'fonts/font-awesome-4.7.0/less/variables.less',
-    'fonts/font-awesome-4.7.0/scss/font-awesome.scss'
+    'fonts/font-awesome-4.7.0/scss/font-awesome.scss',
+    'fonts/fontawesome/fa-brands-400.eot',
+    'fonts/fontawesome/fa-brands-400.svg',
+    'fonts/fontawesome/fa-brands-400.ttf',
+    'fonts/fontawesome/fa-brands-400.woff',
+    'fonts/fontawesome/fa-brands-400.woff2',
+    'fonts/fontawesome/fa-light-300.eot',
+    'fonts/fontawesome/fa-light-300.svg',
+    'fonts/fontawesome/fa-light-300.ttf',
+    'fonts/fontawesome/fa-light-300.woff',
+    'fonts/fontawesome/fa-light-300.woff2',
+    'fonts/fontawesome/fa-regular-400.eot',
+    'fonts/fontawesome/fa-regular-400.svg',
+    'fonts/fontawesome/fa-regular-400.ttf',
+    'fonts/fontawesome/fa-regular-400.woff',
+    'fonts/fontawesome/fa-regular-400.woff2',
+    'fonts/fontawesome/fa-solid-900.eot',
+    'fonts/fontawesome/fa-solid-900.svg',
+    'fonts/fontawesome/fa-solid-900.ttf',
+    'fonts/fontawesome/fa-solid-900.woff',
+    'fonts/fontawesome/fa-solid-900.woff2',
+    'fonts/fontawesome/FjallaOne-Regular.ttf',
+    'fonts/fontawesome/fontawesome-webfont.eot',
+    'fonts/fontawesome/fontawesome-webfont.svg',
+    'fonts/fontawesome/fontawesome-webfont.ttf',
+    'fonts/fontawesome/fontawesome-webfont.woff',
+    'fonts/fontawesome/fontawesome-webfont.woff2',
+    'fonts/fontawesome/FontAwesome.otf'
 ];
 
 
@@ -217,7 +244,7 @@ self.addEventListener('activate', e => {
 });
 
 
-self.addEventListener('fetch', e => {
+/* self.addEventListener('fetch', e => {
     const responseSw = caches.match(e.request).then(respCache => {
         if (respCache) {
             return respCache;
@@ -230,8 +257,18 @@ self.addEventListener('fetch', e => {
 
     });
     e.respondWith(responseSw);
-});
+}); */
 
+self.addEventListener('fetch', function (event) {
+    event.respondWith(
+        caches.match(event.request).then(function(res){
+            if(res){
+                return res;
+            }
+            return requestBackend(event);
+        })
+    )
+});
 
 
 // // tareas asíncronas
