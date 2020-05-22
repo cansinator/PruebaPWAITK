@@ -1,6 +1,6 @@
 
 var url = window.location.href;
-var swLocation = '/PruebaPWAITK/sw.js';
+var swLocation = 'https://cansinator.github.io/PruebaPWAITK/sw.js';
 
 
 if ( navigator.serviceWorker ) {
