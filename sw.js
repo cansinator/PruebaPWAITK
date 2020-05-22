@@ -244,7 +244,7 @@ self.addEventListener('activate', e => {
 });
 
 
-/* self.addEventListener('fetch', e => {
+self.addEventListener('fetch', e => {
     const responseSw = caches.match(e.request).then(respCache => {
         if (respCache) {
             return respCache;
@@ -257,18 +257,8 @@ self.addEventListener('activate', e => {
 
     });
     e.respondWith(responseSw);
-}); */
-
-self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request).then(function(res){
-            if(res){
-                return res;
-            }
-            return requestBackend(event);
-        })
-    )
 });
+
 
 
 // // tareas asíncronas
