@@ -248,7 +248,7 @@ self.addEventListener('fetch', e => {
 
     if (event.request.url.indexOf('https://maps.googleapi.com/js') == 0) {
         event.respondWith(
-            return respCache;
+
         );
       } else {
         event.respondWith(
