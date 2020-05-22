@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<h1>prueba se va a la pagina del FER</h1>
+
+<script>  
+
+caches.open('test-cache').then(function(cache) {
+
+    var miBlob = new Blob();
+    var myHeaders = new Headers();
+
+    myHeaders.append('usuario', 'fetoide');
+    myHeaders.append('usuario1', 'fetoideXXX');
+
+    console.log(myHeaders.get('usuario'));
+    console.log(myHeaders.get('usuario1'));
+
+    var opciones = { "headers" : myHeaders  };
+    var miRespuesta = new Response(miBlob,opciones);
+
+    cache.put('usuariosZZZ', miRespuesta);
+
+    console.log("se añadio al cache");
+    console.log("cache - " + cache.keys());
+    console.log( cache.keys());
+
+    cache.addAll(['datos.js', '/datos/usuarios.json'])
+    .then(function() { 
+        console.log("se añadio al cache")
+    });
+
+    cache.keys().then(function(cachedRequests) { 
+        console.log("el cache --- " + cachedRequests); // [Request, Request]
+        console.log( cachedRequests); // [Request, Request]
+    });
+});
+
+if('caches' in window) {
+    // Has support!
+    console.log("fetoide ++")
+  }
+
+
+</script>
+
+</html>

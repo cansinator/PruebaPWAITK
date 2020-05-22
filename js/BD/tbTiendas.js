@@ -3,8 +3,7 @@ var db = new PouchDB('ITK');
 class Tiendas {
     table = "Tiendas";
 
-    AgregaRegistro(autoservicioId, autoservicioNombre, autoservicioIcon, formatoId, formatoNombre, formatoIcon, zonaId, zonaNombre, tiendaId, tiendaNombre
-        , longitud, latitud, rutaImagen) {
+    AgregaRegistro(autoservicioId, autoservicioNombre, autoservicioIcon, formatoId, formatoNombre, formatoIcon, zonaId, zonaNombre, tiendaId, tiendaNombre, longitud, latitud, rutaImagen) {
         var object = {
             _id: new Date().toISOString(),
             table: this.table,
@@ -28,21 +27,20 @@ class Tiendas {
             .catch(console.log);
     }
 
-    ObtieneTodosRegistros() {
-        let regs = [];
-        db.allDocs({ include_docs: true, descending: false })
+    async ObtieneTodosRegistros() {
+        return db.allDocs({ include_docs: true, descending: false })
             .then(doc => {
-                doc.rows.forEach(element => {
-                    if (element.doc.table == this.table) {
-                        regs.push(element.doc);
-                    }
-                });
+                var json = doc.rows.filter(o => o.doc.table == this.table)
+                var json2 = [];
+                for (var i = 0; i < json.length; i++) {
+                    json2.push(json[i].doc);
+                }
+                return json2;
             });
-        return regs;
     }
 
     ObtieneRegistrosPorId(id) {
-        let regs = [];
+        var regs = [];
         db.allDocs({ include_docs: true, descending: false })
             .then(doc => {
                 doc.rows.forEach(element => {

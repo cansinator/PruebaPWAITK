@@ -3,4 +3,28 @@
 
 <h1>404</h1>
 
+<script>  
+
+    caches.open('test-cache').then(function(cache) {
+    
+
+        console.log("cache - " + cache.keys());
+        console.log( cache.keys());
+    
+        cache.keys().then(function(cachedRequests) { 
+            console.log("el cache --- " + cachedRequests); // [Request, Request]
+            console.log( cachedRequests); // [Request, Request]
+        });
+    
+        console.log( usuario1a);
+    });
+    
+
+    if('caches' in window) {
+        // Has support!
+        console.log("fetoide ++")
+      }
+    
+    
+    </script>
 </html>

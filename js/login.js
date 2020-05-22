@@ -1,3 +1,5 @@
+
+
 // ==================================================================
 //                        Registro de SW
 // ==================================================================
@@ -24,22 +26,46 @@ $("#InicioSesion").click(() => {
     if (!datosRequeridos) { return false; }
 
 
-    var sesion = {
-        usuarioId: '850195',
-        password: 'italika',
-        conn: ""
-    };
+    //var sesion = {
+    //    usuarioId: '850195',
+    //    password: 'italika',
+    //    conn: ""
+    //};
 
-    fetch('http://10.89.136.90:8080/portal/rest/login?usuarioId=850195&password=italika&conn=', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
-        },
+    var usuario = $("#usuario").val();
+    var password = $("#pass").val();
+
+
+    if (usuario=="USUARIO1" && password=="CONTRASENA1") { 
+        window.location="pages/ArbolNavegacion.html"; 
+
+    //fetch('http://localhost:8085/pruebanav.html', {
+    //    method: 'GET',
+    //    headers: {
+    //        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+    //    },
         //body: $.param(sesion)
-    }).then(res => console.log);
-
+    }
+    //).then(res => console.log);
+    else if (usuario=="USUARIO" && password=="CONTRASENA") { 
+        window.location="pages/ArbolNavegacion.html"; }
+    else if (usuario=="USUARIO2" && password=="CONTRASENA2") { 
+        window.location="pages/ArbolNavegacion.html"; }
+    else if (usuario=="USUARIO3" && password=="CONTRASENA3") { 
+        window.location="pages/ArbolNavegacion.html"; }
+    else{
+        window.location="usuarioocontraseña.html";
+    }
 
     //return window.location.href = "/pages/ArbolNavegacion.html";
+});
+
+
+$("#Inicio").click(() => {
+    //fetch('')
+    
+
+    return window.location.href = "index.html";
 });
 
 function validaCampoVacio(input) {

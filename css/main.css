@@ -223,7 +223,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  flex-direction: row-reverse;
+  /*flex-direction: row;*/
 
 }
 
@@ -618,3 +618,25 @@ input.input100 {
   background: #333333;
   color: #fff;
 }
+
+
+/*-- Header --*/
+
+.header { background-color: #00284d; display: flex; height: 49px; justify-content: center; width: 560px;}
+.headContent { 
+  align-items: center; 
+  display: flex; 
+  justify-content: space-between; 
+  width: 80%; 
+  max-width: 1100px;
+}
+
+.headerLogo {text-align: center;}
+.headerMenu {padding: 0px 15px;}
+.headerUser {justify-content: flex-end;padding: 0px  5px 0px 0px;}
+.headerUser div{margin-right: 15px;}
+.headerUser div:last-child {margin-right: 0px;}
+img#imgLogo {padding: 4px 0px 0px 0px;height: 29px;width: 108px;}
+.headerUser {display: flex;align-items: center; padding: 2px 0 2px 0;}	
+.nameUsr {color: #ffffff;}
+.hamburgermenu {display: none;}
