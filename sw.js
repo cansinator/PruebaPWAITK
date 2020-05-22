@@ -95,7 +95,13 @@ const APP_SHELL_INMUTABLE = [
     'vendor/animsition/css/animsition.css',
     'vendor/animsition/css/animsition.min.css',
     'vendor/animsition/js/animsition.js',
-    'vendor/animsition/js/animsition.min.js'
+    'vendor/animsition/js/animsition.min.js',
+    'vendor/pouchdb/pouchdb-7.1.1.min.js',
+    'vendor/pouchdb/pouchdb.min.js',
+    'vendor/select2/select2.css',
+    'vendor/select2/select2.js',
+    'vendor/select2/select2.min.css',
+    'vendor/select2/select2.min.js'
 ];
 
 
